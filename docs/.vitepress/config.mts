@@ -1,7 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { withSidebar } from 'vitepress-sidebar';
 
-
 const vitePressSidebarOptions = {
   // VitePress Sidebar's options here...
   documentRootPath: '/docs',

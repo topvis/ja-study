@@ -1,1 +1,0 @@
-import{_ as l,c as e,o as i,ag as t}from"./chunks/framework.Bfu6eNJI.js";const p=JSON.parse('{"title":"其它","description":"","frontmatter":{},"headers":[],"relativePath":"其它.md","filePath":"其它.md"}'),o={name:"其它.md"};function r(s,a,u,h,n,c){return i(),e("div",null,a[0]||(a[0]=[t("",77)]))}const q=l(o,[["render",r]]);export{p as __pageData,q as default};
