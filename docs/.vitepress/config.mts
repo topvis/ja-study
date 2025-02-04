@@ -11,7 +11,7 @@ const vitePressSidebarOptions = {
 };
 
 const vitePressOptions = {
-  // base: '/repo/',
+  base: '/japanese-study/',
   title: "Japanese Study",
   description: "Grammas & Words",
   themeConfig: {
