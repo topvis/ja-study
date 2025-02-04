@@ -1,0 +1,1 @@
+import{_ as r,c as e,o as l,ag as s}from"./chunks/framework.CkHWihve.js";const p=JSON.parse('{"title":"简体形","description":"","frontmatter":{},"headers":[],"relativePath":"简体形.md","filePath":"简体形.md"}'),n={name:"简体形.md"};function o(d,t,g,a,i,h){return l(),e("div",null,t[0]||(t[0]=[s("",20)]))}const y=r(n,[["render",o]]);export{p as __pageData,y as default};

@@ -1,0 +1,1 @@
+import{_ as e,c as n,o as r,ag as s}from"./chunks/framework.CkHWihve.js";const x=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"temp.md","filePath":"temp.md"}'),g={name:"temp.md"};function l(d,t,o,a,i,c){return r(),n("div",null,t[0]||(t[0]=[s("",6)]))}const h=e(g,[["render",l]]);export{x as __pageData,h as default};
