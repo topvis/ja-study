@@ -1,1 +1,0 @@
-import{_ as a,c as e,o as l,ag as r}from"./chunks/framework.CkHWihve.js";const g=JSON.parse('{"title":"形容词","description":"","frontmatter":{},"headers":[],"relativePath":"形容词.md","filePath":"形容词.md"}'),i={name:"形容词.md"};function o(d,t,n,s,h,c){return l(),e("div",null,t[0]||(t[0]=[r("",21)]))}const u=a(i,[["render",o]]);export{g as __pageData,u as default};
