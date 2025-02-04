@@ -1,1 +1,0 @@
-import{_ as e,c as l,o as d,ag as i}from"./chunks/framework.CkHWihve.js";const o=JSON.parse('{"title":"频率、量词","description":"","frontmatter":{},"headers":[],"relativePath":"频率、量词.md","filePath":"频率、量词.md"}'),a={name:"频率、量词.md"};function r(g,t,h,n,s,x){return d(),l("div",null,t[0]||(t[0]=[i("",17)]))}const c=e(a,[["render",r]]);export{o as __pageData,c as default};
