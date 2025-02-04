@@ -1,0 +1,1 @@
+import{_ as l,c as e,o as i,ag as r}from"./chunks/framework.CkHWihve.js";const c=JSON.parse('{"title":"格助词","description":"","frontmatter":{},"headers":[],"relativePath":"格助词.md","filePath":"格助词.md"}'),o={name:"格助词.md"};function t(s,a,n,h,u,d){return i(),e("div",null,a[0]||(a[0]=[r("",133)]))}const q=l(o,[["render",t]]);export{c as __pageData,q as default};

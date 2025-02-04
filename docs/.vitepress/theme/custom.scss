@@ -1,0 +1,34 @@
+/* .vitepress/theme/custom.css */
+// :root {
+//   --vp-layout-max-width: 1520px;
+// }
+
+// .VPDoc:not(.has-sidebar) .container {
+//   max-width: 1584px !important;
+// }
+
+// .VPDoc:not(.has-sidebar) .content {
+//   max-width: 1264px !important;
+// }
+
+// .VPDoc.has-aside .content-container {
+//   max-width: 800px !important;
+// }
+
+.group:has([role='button']) .VPSidebarItem.level-0 .items {
+  padding-left: 16px !important;
+  border-left: 1px solid var(--vp-c-divider);
+  border-radius: 2px;
+  transition: background-color 0.25s;
+}
+
+ul.example{
+  padding: 10px 10px 10px 20px;
+  border-radius: 10px;
+  background-color: #d7ede7;
+  list-style-position:inside;
+  li {
+    font-style: italic;
+    color: black;
+  }
+}

@@ -1,0 +1,1 @@
+import{_ as e,c as r,o as n,ag as l}from"./chunks/framework.CkHWihve.js";const y=JSON.parse('{"title":"日期","description":"","frontmatter":{},"headers":[],"relativePath":"日期.md","filePath":"日期.md"}'),s={name:"日期.md"};function d(g,t,a,o,i,x){return n(),r("div",null,t[0]||(t[0]=[l("",10)]))}const h=e(s,[["render",d]]);export{y as __pageData,h as default};
