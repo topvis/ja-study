@@ -11,8 +11,8 @@ const vitePressSidebarOptions = {
 
 const vitePressOptions = {
   base: '/japanese-study/',
-  title: "Japanese Study",
-  description: "Grammas & Words",
+  title: "日语学习",
+  description: "日语学习",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     // nav: [
