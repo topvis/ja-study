@@ -1,6 +1,8 @@
 import { defineConfig } from 'vitepress'
 import { withSidebar } from 'vitepress-sidebar';
 
+const base = '/japanese-study/'
+
 const vitePressSidebarOptions = {
   // VitePress Sidebar's options here...
   documentRootPath: '/docs',
@@ -10,18 +12,20 @@ const vitePressSidebarOptions = {
 };
 
 const vitePressOptions = {
-  base: '/japanese-study/',
+  base,
   title: "日语学习",
   description: "日语学习",
   head: [
-    ['link', { rel: "icon", type: "image/png", sizes: "256x256", href: "/japanese-study/a.png" }],
+    ['link', { rel: "icon", type: "image/png", sizes: "256x256", href: base + "a.png" }],
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    // nav: [
-    //   { text: 'Home', link: '/' },
-    //   { text: 'Examples', link: '/markdown-examples' }
-    // ],
+    nav: [
+      { text: 'JapanDict', link: 'https://www.japandict.com/' },
+      { text: 'Jisho', link: 'https://jisho.org/' },
+      // { text: 'Home', link: '/' },
+      // { text: 'Examples', link: '/markdown-examples' }
+    ],
     search: {
       provider: 'local'
     },
