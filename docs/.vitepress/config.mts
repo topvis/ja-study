@@ -14,7 +14,7 @@ const vitePressOptions = {
   title: "日语学习",
   description: "日语学习",
   head: [
-    ['link', { rel: "icon", type: "image/png", sizes: "256x256", href: "/public/a.png" }],
+    ['link', { rel: "icon", type: "image/png", sizes: "256x256", href: "/japanese-study/public/a.png" }],
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
