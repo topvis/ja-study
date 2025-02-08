@@ -22,8 +22,8 @@ importers:
         specifier: ^1.6.3
         version: 1.6.3(@algolia/client-search@5.20.0)(@types/node@22.13.1)(postcss@8.5.1)(sass-embedded@1.83.4)(sass@1.83.4)(search-insights@2.17.3)
       vitepress-sidebar:
-        specifier: ^1.30.2
-        version: 1.30.2
+        specifier: ^1.31.0
+        version: 1.31.0
 
 packages:
 
@@ -912,6 +912,10 @@ packages:
   property-information@6.5.0:
     resolution: {integrity: sha512-PgTgs/BlvHxOu8QuEN7wi5A0OmXaBcHpmCSTehcs6Uuu9IkDIEo13Hy7n898RHfrQ49vKCoGeWZSaAK01nwVig==}
 
+  qsu@1.6.4:
+    resolution: {integrity: sha512-4PRyFDQhfvz/Np+W2dRJ96bna3Zfby/XOxum9R6hdkA3k8WLHwzcrpJ2lL/zeUYbJJu6ODpKxefJavHk0oCVIw==}
+    engines: {node: '>=18.0.0'}
+
   readdirp@4.1.1:
     resolution: {integrity: sha512-h80JrZu/MHUZCyHu5ciuoI0+WxsCxzxJTILn6Fs8rxSnFPh+UVHYfeIxK1nVGugMqkfC4vJcBOYbkfkwYK0+gw==}
     engines: {node: '>= 14.18.0'}
@@ -1212,8 +1216,8 @@ packages:
       terser:
         optional: true
 
-  vitepress-sidebar@1.30.2:
-    resolution: {integrity: sha512-5NWULe+lMGcair5z23Oapp4+sOSVwpUEj7s2JwZzb9T4pUbY6EumbSPZlY7q+h3vApnaYn4psVAzsalSKBJ/Xg==}
+  vitepress-sidebar@1.31.0:
+    resolution: {integrity: sha512-ctdALc8ptXsD0HuOYMM8xjUu3lSBfHGJJZYtKYuixvjhL+q/AipLeSvsvwfUEhDIwRyi46HQlSa/7XsevVA/Mg==}
     engines: {node: '>=18.0.0'}
 
   vitepress@1.6.3:
@@ -2090,6 +2094,8 @@ snapshots:
 
   property-information@6.5.0: {}
 
+  qsu@1.6.4: {}
+
   readdirp@4.1.1:
     optional: true
 
@@ -2370,10 +2376,11 @@ snapshots:
       sass: 1.83.4
       sass-embedded: 1.83.4
 
-  vitepress-sidebar@1.30.2:
+  vitepress-sidebar@1.31.0:
     dependencies:
       glob: 10.4.5
       gray-matter: 4.0.3
+      qsu: 1.6.4
 
   vitepress@1.6.3(@algolia/client-search@5.20.0)(@types/node@22.13.1)(postcss@8.5.1)(sass-embedded@1.83.4)(sass@1.83.4)(search-insights@2.17.3):
     dependencies:
