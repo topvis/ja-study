@@ -7,7 +7,7 @@ const vitePressSidebarOptions = {
   // VitePress Sidebar's options here...
   documentRootPath: '/docs',
   collapsed: false,
-  capitalizeFirst: true,
+  capitalizeFirst: true
   // sortMenusByName: true
   // hyphenToSpace: true,
 };
