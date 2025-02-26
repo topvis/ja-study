@@ -9,7 +9,7 @@ const vitePressSidebarOptions = {
   collapsed: false,
   capitalizeFirst: true,
   // sortMenusByName: true
-  hyphenToSpace: true,
+  // hyphenToSpace: true,
 };
 
 const vitePressOptions = {
