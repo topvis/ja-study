@@ -15,6 +15,12 @@
 //   max-width: 800px !important;
 // }
 
+@font-face {
+  font-family: 'MyCustomFont'; /* Choose a name for your font */
+  src: url('UDDigiKyokashoNP-R-02.ttf'); /* Path to your font file */
+}
+
+
 .group:has([role='button']) .VPSidebarItem.level-0 .items {
   padding-left: 16px !important;
   border-left: 1px solid var(--vp-c-divider);
@@ -23,12 +29,13 @@
 }
 
 ul.example{
+  font-family: MyCustomFont;
   padding: 10px 10px 10px 20px;
   border-radius: 10px;
   background-color: #d7ede7;
   list-style-position:inside;
   li {
-    font-style: italic;
+    // font-style: italic;
     color: black;
   }
 }
