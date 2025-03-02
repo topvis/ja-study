@@ -15,19 +15,6 @@
 //   max-width: 800px !important;
 // }
 
-@font-face {
-  font-family: 'MyCustomFont';
-  src: url('public/UDDigiKyokashoNP-R-02.ttf');
-  font-weight: 400;
-}
-@font-face {
-  // font-family: 'MyCustomFontBold';
-  font-family: 'MyCustomFont';
-  src: url('public/UDDigiKyokashoNP-B-02.ttf');
-  font-weight: 800;
-}
-
-
 .group:has([role='button']) .VPSidebarItem.level-0 .items {
   padding-left: 16px !important;
   border-left: 1px solid var(--vp-c-divider);
@@ -36,18 +23,12 @@
 }
 
 ul.example{
-  font-family: MyCustomFont;
   padding: 10px 10px 10px 20px;
   border-radius: 10px;
   background-color: #d7ede7;
   list-style-position:inside;
   li {
-    // font-style: italic;
+    font-style: italic;
     color: black;
-    zoom: 1.2;
-    // b {
-    //   font-family: MyCustomFontBold;
-    // }
   }
-
 }
