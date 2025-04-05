@@ -12,7 +12,7 @@
   margin: 5px 0;
   display: flex;
   gap: 10px;
-  ::v-deep > div {
+  :deep(div) {
     font-style: italic;
     color: black;
     background-color: gold;

@@ -16,7 +16,7 @@
   background-color: #d7ede7;
   font-style: italic;
 
-  ::v-deep > div {
+  :deep(div) {
     display: flex;
     align-items: center;
     padding: 3px 0;
