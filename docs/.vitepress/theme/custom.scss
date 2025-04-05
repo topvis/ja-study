@@ -22,17 +22,33 @@
   transition: background-color 0.25s;
 }
 
-ul.example{
-  padding: 10px 10px 10px 20px;
-  border-radius: 10px;
-  background-color: #d7ede7;
-  list-style-position:inside;
-  li {
-    font-style: italic;
-    color: black;
-    white-space: pre;
-    b {
-      color: #aa1111;
-    }
-  }
-}
+// ul.example{
+//   padding: 10px 10px 10px 20px;
+//   border-radius: 10px;
+//   background-color: #d7ede7;
+//   list-style-position:inside;
+//   li {
+//     font-style: italic;
+//     color: black;
+//     white-space: pre;
+//     b {
+//       color: #aa1111;
+//     }
+//   }
+// }
+
+// .example-words {
+//   display: flex;
+//   gap: 10px;
+//   div {
+//     font-style: italic;
+//     color: black;
+//     background-color: gold;
+//     padding: 5px 10px;
+//     border-radius: 10px;
+//     white-space: pre;
+//     b {
+//       color: #aa1111;
+//     }
+//   }
+// }

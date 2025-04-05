@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress'
 import { withSidebar } from 'vitepress-sidebar';
-
 const base = '/ja-study/'
 
 const vitePressSidebarOptions = {
@@ -31,7 +30,6 @@ const vitePressOptions = {
       provider: 'local'
     },
 
-
     // sidebar: [
     //   {
     //     text: 'Examples',
@@ -46,6 +44,7 @@ const vitePressOptions = {
     //   { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     // ]
   },
+
 }
 
 // https://vitepress.dev/reference/site-config
