@@ -22,7 +22,12 @@
     padding: 3px 0;
 
     b {
-      color: #aa1111;
+      // color: #aa1111;
+      background-color: yellow;
+      margin: 0 5px;
+      padding: 0 5px;
+      border-radius: 5px;
+      font-weight: normal;
     }
 
     &::before {
