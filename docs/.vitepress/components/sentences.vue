@@ -17,8 +17,6 @@
   font-style: italic;
 
   :deep(div) {
-    display: flex;
-    align-items: center;
     padding: 3px 0;
 
     b {
