@@ -27,6 +27,11 @@
       border-radius: 5px;
       font-weight: normal;
     }
+    s {
+      color: red;
+      margin-left: 2px;
+      margin-right: 2px;
+    }
 
     &::before {
       content: '•';
