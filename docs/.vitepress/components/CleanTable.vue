@@ -51,6 +51,10 @@ const props = defineProps({
       justify-content: center;
     }
 
+    &.bold {
+      font-weight: bold;
+    }
+
     &.c2 {
       @extend .center;
       grid-column: span 2;
