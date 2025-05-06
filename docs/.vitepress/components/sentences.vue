@@ -4,8 +4,7 @@
   </div>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
 .sentences-container {
@@ -34,7 +33,7 @@
     }
 
     &::before {
-      content: '•';
+      content: "•";
       margin-right: 10px;
       font-size: 16px;
     }
