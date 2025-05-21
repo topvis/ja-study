@@ -1,17 +1,17 @@
 <template>
   <div class="words-container">
-    <slot/>
+    <slot />
   </div>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
 .words-container {
   margin: 5px 0;
   display: flex;
   gap: 10px;
+  align-items: center;
   :deep(div) {
     font-style: italic;
     color: black;
@@ -23,6 +23,5 @@
       color: #aa1111;
     }
   }
-
 }
 </style>

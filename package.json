@@ -6,13 +6,13 @@
     "preview": "vitepress preview docs"
   },
   "devDependencies": {
-    "@types/node": "^22.15.17",
-    "sass-embedded": "^1.88.0",
+    "@types/node": "^22.15.21",
+    "sass-embedded": "^1.89.0",
     "vitepress": "^1.6.3",
     "vitepress-sidebar": "^1.31.1"
   },
   "dependencies": {
-    "vue": "^3.5.13"
+    "vue": "^3.5.14"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
