@@ -6,10 +6,8 @@
 
 <script setup>
 const props = defineProps({
-  columns: { type: String, default: '55px 45px 2.3fr 1.7fr' },
+  columns: { type: String, default: "55px 45px 2.3fr 1.7fr" },
 })
-
-
 </script>
 
 <style lang="scss">
@@ -29,7 +27,7 @@ const props = defineProps({
     grid-template-columns: 55px 45px 1fr 1.3fr 1fr 0.7fr;
   }
 
-  >div {
+  > div {
     box-sizing: border-box;
     background-color: white;
     font-size: 14px;
@@ -38,6 +36,11 @@ const props = defineProps({
 
     &.b {
       font-weight: bold;
+      color: red;
+    }
+    b {
+      font-weight: bold;
+      color: red;
     }
 
     &.reverse {
@@ -84,6 +87,10 @@ const props = defineProps({
       @extend .center;
       grid-row: span 9;
     }
+    &.r12 {
+      @extend .center;
+      grid-row: span 12;
+    }
 
     &.h-line {
       all: unset;
@@ -92,10 +99,6 @@ const props = defineProps({
       background-color: #555;
       margin: -1px 0 -1px 0;
     }
-
   }
-
-
-
 }
 </style>
