@@ -150,6 +150,25 @@ const conjugations: Conjugation[] = [
       { ending: "する", result: "しろ／せよ" },
     ],
   },
+  {
+    form: "意志",
+    godan: [
+      { ending: "う", result: "～おう" },
+      { ending: "く", result: "～こう" },
+      { ending: "ぐ", result: "～ごう" },
+      { ending: "す", result: "～そう" },
+      { ending: "つ", result: "～とう" },
+      { ending: "ぬ", result: "～のう" },
+      { ending: "ぶ", result: "～ぼう" },
+      { ending: "む", result: "～もう" },
+      { ending: "る", result: "～ろう" },
+    ],
+    ichidan: [{ ending: "～る", result: "よう" }],
+    irregular: [
+      { ending: "来る", result: "来<b>(こ)</b>よう" },
+      { ending: "する", result: "しよう" },
+    ],
+  },
 ]
 
 const conjugationsExt = computed(() => {
@@ -157,8 +176,8 @@ const conjugationsExt = computed(() => {
     const rules = [] as Rule[]
     for (let i = 0; i < conj.godan.length; i++) {
       rules.push(conj.godan[i])
-      rules.push(conj.ichidan[i])
-      rules.push(conj.irregular[i])
+      rules.push(conj.ichidan[i] ?? undefined)
+      rules.push(conj.irregular[i] ?? undefined)
     }
     return {
       form: conj.form,
