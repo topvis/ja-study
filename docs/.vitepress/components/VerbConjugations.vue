@@ -207,7 +207,7 @@ const conjugationsExt = computed(() => {
     }
   })
 
-  console.log(res)
+  // console.log(res);
   return res
 })
 </script>
