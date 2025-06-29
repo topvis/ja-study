@@ -41,149 +41,172 @@ type Rule = {
   result: string
 }
 
-type Conjugation = {
-  form: string
-  godan: Rule[]
-  ichidan: Rule[]
-  irregular: Rule[]
+type RuleMap = { [ending: string]: string }
+
+type ConjugationRuleGroup = {
+  godan: RuleMap
+  ichidan: RuleMap
+  irregular: RuleMap
 }
 
-const conjugations: Conjugation[] = [
-  {
-    form: "ます",
-    godan: [
-      { ending: "う", result: "います" },
-      { ending: "く", result: "きます" },
-      { ending: "ぐ", result: "ぎます" },
-      { ending: "す", result: "します" },
-      { ending: "つ", result: "ちます" },
-      { ending: "ぬ", result: "にます" },
-      { ending: "ぶ", result: "びます" },
-      { ending: "む", result: "みます" },
-      { ending: "る", result: "ります" },
-    ],
-    ichidan: [{ ending: "～る", result: "ます" }],
-    irregular: [
-      { ending: "来る", result: "来ます" },
-      { ending: "する", result: "します" },
-    ],
+type Conjugations = { [form: string]: ConjugationRuleGroup }
+
+const conjugations: Conjugations = {
+  ます: {
+    godan: {
+      う: "います",
+      く: "きます",
+      ぐ: "ぎます",
+      す: "します",
+      つ: "ちます",
+      ぬ: "にます",
+      ぶ: "びます",
+      む: "みます",
+      る: "ります",
+    },
+    ichidan: {
+      "～る": "ます",
+    },
+    irregular: {
+      来る: "来ます",
+      する: "します",
+    },
   },
-  {
-    form: "て",
-    godan: [
-      { ending: "う", result: "～って" },
-      { ending: "く", result: "～いて" },
-      { ending: "ぐ", result: "～いで" },
-      { ending: "す", result: "～して" },
-      { ending: "つ", result: "～って" },
-      { ending: "ぬ", result: "～んで" },
-      { ending: "ぶ", result: "～んで" },
-      { ending: "む", result: "～んで" },
-      { ending: "る", result: "～って" },
-    ],
-    ichidan: [{ ending: "～る", result: "て" }],
-    irregular: [
-      { ending: "来る", result: "来て" },
-      { ending: "する", result: "して" },
-    ],
+
+  て: {
+    godan: {
+      う: "～って",
+      く: "～いて",
+      ぐ: "～いで",
+      す: "～して",
+      つ: "～って",
+      ぬ: "～んで",
+      ぶ: "～んで",
+      む: "～んで",
+      る: "～って",
+    },
+    ichidan: {
+      "～る": "て",
+    },
+    irregular: {
+      来る: "来て",
+      する: "して",
+    },
   },
-  {
-    form: "た",
-    godan: [
-      { ending: "う", result: "～った" },
-      { ending: "く", result: "～いた" },
-      { ending: "ぐ", result: "～いだ" },
-      { ending: "す", result: "～した" },
-      { ending: "つ", result: "～った" },
-      { ending: "ぬ", result: "～んだ" },
-      { ending: "ぶ", result: "～んだ" },
-      { ending: "む", result: "～んだ" },
-      { ending: "る", result: "～った" },
-    ],
-    ichidan: [{ ending: "～る", result: "た" }],
-    irregular: [
-      { ending: "来る", result: "来た" },
-      { ending: "する", result: "した" },
-    ],
+
+  た: {
+    godan: {
+      う: "～った",
+      く: "～いた",
+      ぐ: "～いだ",
+      す: "～した",
+      つ: "～った",
+      ぬ: "～んだ",
+      ぶ: "～んだ",
+      む: "～んだ",
+      る: "～った",
+    },
+    ichidan: {
+      "～る": "た",
+    },
+    irregular: {
+      来る: "来た",
+      する: "した",
+    },
   },
-  {
-    form: "ない",
-    godan: [
-      { ending: "う", result: "～<b>わ</b>ない" },
-      { ending: "く", result: "～かない" },
-      { ending: "ぐ", result: "～がない" },
-      { ending: "す", result: "～さない" },
-      { ending: "つ", result: "～たない" },
-      { ending: "ぬ", result: "～なない" },
-      { ending: "ぶ", result: "～ばない" },
-      { ending: "む", result: "～まない" },
-      { ending: "る", result: "～らない" },
-    ],
-    ichidan: [{ ending: "～る", result: "<span><s>(ます)</s>形+ない</span>" }],
-    irregular: [
-      { ending: "来る", result: "来<b>(こ)</b>ない" },
-      { ending: "する", result: "しない" },
-    ],
+
+  ない: {
+    godan: {
+      う: "～<b>わ</b>ない",
+      く: "～かない",
+      ぐ: "～がない",
+      す: "～さない",
+      つ: "～たない",
+      ぬ: "～なない",
+      ぶ: "～ばない",
+      む: "～まない",
+      る: "～らない",
+    },
+    ichidan: {
+      "～る": "<span><s>(ます)</s>形+ない</span>",
+    },
+    irregular: {
+      来る: "来<b>(こ)</b>ない",
+      する: "しない",
+    },
   },
-  {
-    form: "命令",
-    godan: [
-      { ending: "う", result: "～え" },
-      { ending: "く", result: "～け" },
-      { ending: "ぐ", result: "～げ" },
-      { ending: "す", result: "～せ" },
-      { ending: "つ", result: "～て" },
-      { ending: "ぬ", result: "～ね" },
-      { ending: "ぶ", result: "～べ" },
-      { ending: "む", result: "～め" },
-      { ending: "る", result: "～れ" },
-      { ending: "くださる", result: "<b>ください</b>" },
-      { ending: "なさる", result: "<b>なさい</b>" },
-      { ending: "いらっしゃる", result: "<b>いらっしゃい</b>" },
-    ],
-    ichidan: [
-      { ending: "～る", result: "ろ" },
-      { ending: "くれる", result: "<b>くれ</b>" },
-    ],
-    irregular: [
-      { ending: "来る", result: "来<b>(こ)</b>い" },
-      { ending: "する", result: "しろ／せよ" },
-    ],
+
+  命令: {
+    godan: {
+      う: "～え",
+      く: "～け",
+      ぐ: "～げ",
+      す: "～せ",
+      つ: "～て",
+      ぬ: "～ね",
+      ぶ: "～べ",
+      む: "～め",
+      る: "～れ",
+      くださる: "<b>ください</b>",
+      なさる: "<b>なさい</b>",
+      いらっしゃる: "<b>いらっしゃい</b>",
+    },
+    ichidan: {
+      "～る": "ろ",
+      くれる: "<b>くれ</b>",
+    },
+    irregular: {
+      来る: "来<b>(こ)</b>い",
+      する: "しろ／せよ",
+    },
   },
-  {
-    form: "意志",
-    godan: [
-      { ending: "う", result: "～おう" },
-      { ending: "く", result: "～こう" },
-      { ending: "ぐ", result: "～ごう" },
-      { ending: "す", result: "～そう" },
-      { ending: "つ", result: "～とう" },
-      { ending: "ぬ", result: "～のう" },
-      { ending: "ぶ", result: "～ぼう" },
-      { ending: "む", result: "～もう" },
-      { ending: "る", result: "～ろう" },
-    ],
-    ichidan: [{ ending: "～る", result: "よう" }],
-    irregular: [
-      { ending: "来る", result: "来<b>(こ)</b>よう" },
-      { ending: "する", result: "しよう" },
-    ],
+
+  意志: {
+    godan: {
+      う: "～おう",
+      く: "～こう",
+      ぐ: "～ごう",
+      す: "～そう",
+      つ: "～とう",
+      ぬ: "～のう",
+      ぶ: "～ぼう",
+      む: "～もう",
+      る: "～ろう",
+    },
+    ichidan: {
+      "～る": "よう",
+    },
+    irregular: {
+      来る: "来<b>(こ)</b>よう",
+      する: "しよう",
+    },
   },
-]
+}
+
+function getObjectByKeyIndex(obj: object, i: number) {
+  const key = Object.keys(obj)[i]
+  const v = Object.values(obj)[i]
+  return { ending: key, result: v }
+}
 
 const conjugationsExt = computed(() => {
-  const res = conjugations.map((conj) => {
-    const rules = [] as Rule[]
-    for (let i = 0; i < conj.godan.length; i++) {
-      rules.push(conj.godan[i])
-      rules.push(conj.ichidan[i] ?? undefined)
-      rules.push(conj.irregular[i] ?? undefined)
+  const res = Object.entries(conjugations).map(([form, conj]) => {
+    const rules: Rule[] = []
+
+    const n = Object.keys(conj.godan).length
+
+    for (let i = 0; i < n; i++) {
+      rules.push(getObjectByKeyIndex(conj.godan, i))
+      rules.push(getObjectByKeyIndex(conj.ichidan, i))
+      rules.push(getObjectByKeyIndex(conj.irregular, i))
     }
+
     return {
-      form: conj.form,
+      form,
       rules,
     }
   })
+
   console.log(res)
   return res
 })
