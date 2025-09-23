@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import type { HeadConfig } from 'vitepress'
 import { withSidebar } from 'vitepress-sidebar';
 const base = '/ja-study/'
 
@@ -16,13 +17,14 @@ const vitePressOptions = {
   title: "日语学习",
   description: "日语学习",
   head: [
-    ['link', { rel: "icon", type: "image/png", sizes: "256x256", href: base + "a.png" }],
-  ],
+    ['link', { rel: "icon", type: "image/png", sizes: "256x256", href: base + "a.png" }, ''],
+  ] as HeadConfig[],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'JapanDict', link: 'https://www.japandict.com/' },
       { text: 'Jisho', link: 'https://jisho.org/' },
+      { text: 'MOJi辞書', link: 'https://www.mojidict.com/' },
       // { text: 'Home', link: '/' },
       // { text: 'Examples', link: '/markdown-examples' }
     ],
