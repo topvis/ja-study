@@ -4,11 +4,9 @@ import { withSidebar } from 'vitepress-sidebar';
 const base = '/ja-study/';
 
 const vitePressSidebarOptions = {
-  // VitePress Sidebar's options here...
   documentRootPath: '/docs',
   collapsed: false,
   capitalizeFirst: true,
-  // sortMenusByName: true
   hyphenToSpace: true,
 };
 
@@ -25,26 +23,10 @@ const vitePressOptions = {
       { text: 'JapanDict', link: 'https://www.japandict.com/' },
       { text: 'Jisho', link: 'https://jisho.org/' },
       { text: 'MOJi辞書', link: 'https://www.mojidict.com/' },
-      // { text: 'Home', link: '/' },
-      // { text: 'Examples', link: '/markdown-examples' }
     ],
     search: {
       provider: 'local'
     },
-
-    // sidebar: [
-    //   {
-    //     text: 'Examples',
-    //     items: [
-    //       { text: 'Markdown Examples', link: '/markdown-examples' },
-    //       { text: 'Runtime API Examples', link: '/api-examples' }
-    //     ]
-    //   }
-    // ],
-
-    // socialLinks: [
-    //   { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    // ]
   },
   build: { target: 'esnext' }
 
