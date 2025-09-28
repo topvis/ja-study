@@ -4,7 +4,14 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup lang="ts">
+import { getColorStyle, Color } from "./helpers"
+import { computed } from "vue"
+const props = withDefaults(defineProps<{ color?: Color }>(), { color: "gold" })
+
+const bg = computed(() => getColorStyle(props.color).backgroundColor)
+const txt = computed(() => getColorStyle(props.color).color)
+</script>
 
 <style lang="scss" scoped>
 .words-container {
@@ -14,8 +21,8 @@
   align-items: center;
   :deep(div) {
     font-style: italic;
-    color: black;
-    background-color: gold;
+    color: v-bind(txt); //  black;
+    background-color: v-bind(bg); // gold;
     padding: 5px 10px;
     border-radius: 10px;
     white-space: pre;

@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 import type { HeadConfig } from 'vitepress'
 import { withSidebar } from 'vitepress-sidebar';
-const base = '/ja-study/'
+const base = '/ja-study/';
 
 const vitePressSidebarOptions = {
   // VitePress Sidebar's options here...
