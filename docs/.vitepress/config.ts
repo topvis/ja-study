@@ -46,6 +46,7 @@ const vitePressOptions = {
     //   { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     // ]
   },
+  build: { target: 'esnext' }
 
 }
 
