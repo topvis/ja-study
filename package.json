@@ -8,8 +8,6 @@
   },
   "devDependencies": {
     "@types/node": "^24.5.2",
-    "@types/tiny-segmenter": "^0.2.0",
-    "flexsearch": "^0.7.31",
     "sass-embedded": "^1.93.2",
     "typescript": "^5.9.2",
     "vitepress": "^1.6.4",
