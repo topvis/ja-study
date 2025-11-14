@@ -68,7 +68,7 @@ const conjugations: Conjugations = {
       "～る": "ます",
     },
     irregular: {
-      来る: "来ます",
+      来る: "来(き)ます",
       する: "します",
     },
   },
@@ -89,7 +89,7 @@ const conjugations: Conjugations = {
       "～る": "て",
     },
     irregular: {
-      来る: "来て",
+      来る: "来(き)て",
       する: "して",
     },
   },
@@ -110,7 +110,7 @@ const conjugations: Conjugations = {
       "～る": "た",
     },
     irregular: {
-      来る: "来た",
+      来る: "来(き)た",
       する: "した",
     },
   },
