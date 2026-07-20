@@ -3,8 +3,7 @@
 name: Deploy VitePress site to Pages
 
 on:
-  # Runs on pushes targeting the `main` branch. Change this to `master` if you're
-  # using the `master` branch as the default branch.
+  # Runs on pushes targeting the `main` branch.
   push:
     branches: [main]
 
@@ -31,22 +30,28 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Not needed if lastUpdated is not enabled
-      - uses: pnpm/action-setup@v3 # Uncomment this block if you're using pnpm
+          fetch-depth: 0 # Needed for lastUpdated plugin support in VitePress
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
         with:
-          version: 9 # Not needed if you've set "packageManager" in package.json
-      # - uses: oven-sh/setup-bun@v1 # Uncomment this if you're using Bun
+          version: 9 # Omit or remove this line if you have "packageManager" set in package.json
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 24
-          cache: pnpm # or pnpm / yarn
+          node-version: 22
+          cache: pnpm
+
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
+
       - name: Install dependencies
-        run: pnpm install # / yarn install / bun install
+        run: pnpm install
+
       - name: Build with VitePress
-        run: pnpm build # / yarn docs:build / bun run docs:build
+        run: pnpm build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
