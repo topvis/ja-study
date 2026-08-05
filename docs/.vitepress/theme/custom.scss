@@ -21,3 +21,25 @@ del::after {
   border-width: 3px;
   transform: rotate(15deg);
 }
+
+x {
+  position: relative;
+  text-decoration: none;
+}
+
+x::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 1px solid;
+  border-color: #ff000088;
+  border-width: 3px;
+  transform: rotate(15deg);
+}
+
+r {
+  color: #e53e3e;
+  font-weight: 500;
+}
