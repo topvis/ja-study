@@ -43,3 +43,34 @@ r {
   color: #e53e3e;
   font-weight: 500;
 }
+
+/* 1. 放大主内容区域（包括文章和表格）的最大宽度 */
+:root {
+  --vp-layout-max-width: 100% !important; /* 默认是 1440px，可调整为你需要的值 */
+}
+
+/* 放宽文章正文区域的最大限制 */
+.VPDoc .container .content {
+  max-width: 100% !important;
+}
+
+.VPDoc .content-container {
+  max-width: 100% !important;
+}
+
+/* 使用高权重选择器强制撑满宽度 */
+.vp-doc div > table,
+.vp-doc table {
+  display: table !important;
+  // width: 100% !important;
+  max-width: 100% !important;
+  table-layout: auto; /* 或 fixed */
+}
+
+/* 单元格居中及防挤压 */
+.vp-doc th,
+.vp-doc td {
+  text-align: center;
+  word-break: keep-all; /* 防止日文假名被不自然打断 */
+  padding: 2;
+}

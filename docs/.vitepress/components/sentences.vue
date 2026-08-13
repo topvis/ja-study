@@ -14,6 +14,7 @@
   color: black;
   background-color: #d7ede7;
   font-style: italic;
+  display: inline-block;
 
   :deep(div) {
     padding: 3px 0;
