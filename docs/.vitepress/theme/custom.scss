@@ -44,6 +44,10 @@ r {
   font-weight: 500;
 }
 
+.vp-doc rt {
+  font-size: 60%;
+}
+
 /* 1. 放大主内容区域（包括文章和表格）的最大宽度 */
 :root {
   --vp-layout-max-width: 100% !important; /* 默认是 1440px，可调整为你需要的值 */
@@ -72,5 +76,21 @@ r {
 .vp-doc td {
   text-align: center;
   word-break: keep-all; /* 防止日文假名被不自然打断 */
-  padding: 2;
+  padding: 2px 3px;
+}
+
+/* 缩窄右侧导航栏 */
+.aside {
+  max-width: 120px !important;
+}
+.aside-container {
+  width: 100% !important;
+}
+
+.VPDocAside {
+  width: 100px !important;
+}
+
+.VPDocAsideOutline {
+  width: 100% !important;
 }

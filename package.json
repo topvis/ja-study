@@ -7,13 +7,13 @@
     "preview": "vitepress preview docs"
   },
   "devDependencies": {
-    "@types/node": "^26.1.2",
-    "sass-embedded": "^1.100.0",
+    "@types/node": "^26.2.0",
+    "sass-embedded": "^1.102.0",
     "typescript": "^7.0.2",
     "vitepress": "2.0.0-alpha.18",
-    "vitepress-sidebar": "^1.36.1"
+    "vitepress-sidebar": "^1.38.0"
   },
   "dependencies": {
-    "vue": "^3.5.40"
+    "vue": "^3.5.41"
   }
 }
