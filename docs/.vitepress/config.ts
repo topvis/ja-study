@@ -5,7 +5,7 @@ const base = '/ja-study/';
 
 const vitePressSidebarOptions = {
   documentRootPath: '/docs',
-  collapsed: false,
+  collapsed: true,
   capitalizeFirst: true,
   hyphenToSpace: true,
 };
