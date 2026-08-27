@@ -4,6 +4,7 @@ import sentences from '../components/sentences.vue';
 import words from '../components/words.vue'
 import word from '../components/word.vue'
 import CleanTable from '../components/CleanTable.vue';
+import Fu from '../components/Fu.vue';
 import VerbConjugations from '../components/VerbConjugations.vue'
 import HighlightedBlock from '../components/HighlightedBlock.vue'
 import './custom.scss';
@@ -19,5 +20,6 @@ export default {
     app.component('CleanTable', CleanTable);
     app.component('VerbConjugations', VerbConjugations)
     app.component('HighlightedBlock', HighlightedBlock)
+    app.component('Fu', Fu)
   }
 } satisfies Theme

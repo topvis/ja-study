@@ -17,6 +17,15 @@ const vitePressOptions = {
   head: [
     ['link', { rel: "icon", type: "image/png", sizes: "256x256", href: base + "a.png" }, ''],
   ] as HeadConfig[],
+  // Add the vue configuration here
+  vue: {
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag: string) => tag === 'r'
+      }
+    }
+  },
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -28,7 +37,8 @@ const vitePressOptions = {
       provider: 'local'
     },
   },
-  build: { target: 'esnext' }
+  build: { target: 'esnext' },
+
 
 }
 
