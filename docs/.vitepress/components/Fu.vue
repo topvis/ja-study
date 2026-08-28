@@ -114,7 +114,8 @@ const parsedNodes = computed<RubyNode[]>(() => {
 }
 
 ruby {
-  ruby-align: center;
+  /* Distributes hiragana evenly across the full width of the base text */
+  ruby-align: space-around;
   line-height: 1.2;
   font-weight: bold;
 }
@@ -124,8 +125,14 @@ rt {
   user-select: none;
   transform: translateY(-2px);
 
+  /* Force the reading base to match width and stretch content */
+  width: 100%;
+  text-align-last: justify;
+  text-justify: inter-character;
+
   &.pitch-rt {
     font-size: 0.8em;
+    text-align-last: center; /* Do not stretch the pitch accent circle */
   }
 }
 </style>
