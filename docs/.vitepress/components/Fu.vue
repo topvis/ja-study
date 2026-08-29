@@ -1,5 +1,5 @@
 <template>
-  <component :is="isBlock ? 'div' : 'span'" class="fu-container">
+  <component :is="isBlock ? 'div' : 'span'" class="fu-container" :style="containerStyle">
     <ruby v-for="(node, index) in parsedNodes" :key="index">
       {{ node.kanji }}
       <rt v-if="node.rt" :class="{ 'pitch-rt': node.isPitch }">{{ node.rt }}</rt>
@@ -9,15 +9,33 @@
 </template>
 
 <script setup lang="ts">
-import { useSlots, computed, type VNode } from "vue"
+import { useSlots, computed, type VNode, type CSSProperties } from "vue"
 
-const props = defineProps<{
-  block?: boolean
-  pitch?: number | string
-}>()
+const props = withDefaults(
+  defineProps<{
+    block?: boolean
+    pitch?: number | string
+    color?: string
+    red?: boolean
+  }>(),
+  {
+    red: false,
+  },
+)
 
 const isBlock = computed(() => props.block ?? false)
 const slots = useSlots()
+
+// "red" takes precedence over "color"
+const containerStyle = computed<CSSProperties>(() => {
+  if (props.red) {
+    return { color: "#e53e3e" }
+  }
+  if (props.color) {
+    return { color: props.color }
+  }
+  return {}
+})
 
 // Map numbers 0-20 to circled unicode numbers
 const circledTone = computed(() => {
@@ -111,6 +129,8 @@ const parsedNodes = computed<RubyNode[]>(() => {
 .fu-container {
   display: inline-flex;
   align-items: baseline;
+  /* Ensure children inherit the color property set on containerStyle */
+  color: inherit;
 }
 
 ruby {
@@ -118,12 +138,14 @@ ruby {
   ruby-align: space-around;
   line-height: 1.2;
   font-weight: bold;
+  color: inherit;
 }
 
 rt {
   font-size: 0.7em;
   user-select: none;
   transform: translateY(-2px);
+  color: inherit;
 
   /* Force the reading base to match width and stretch content */
   width: 100%;
