@@ -153,7 +153,7 @@ rt {
   text-justify: inter-character;
 
   &.pitch-rt {
-    font-size: 0.8em;
+    font-size: 0.6em;
     text-align-last: center; /* Do not stretch the pitch accent circle */
   }
 }
